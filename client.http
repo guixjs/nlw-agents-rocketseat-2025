@@ -1,0 +1,5 @@
+#VARIAVEIS
+@baseUrl = http://localhost:3333
+
+#GET rooms
+GET {{baseUrl}}/rooms
