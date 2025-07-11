@@ -10,7 +10,6 @@ type RoomParams = {
 
 export function Room() {
   const params = useParams<RoomParams>()
-
   if (!params.roomId) {
     return <Navigate replace to="/" />
   }

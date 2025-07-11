@@ -34,7 +34,7 @@ export function RoomList() {
                   </Badge>
 
                   <Badge variant={"secondary"} className="text-xs">
-                    {room.questionCount} pergunta(s)
+                    {room.questionsCount} pergunta(s)
                   </Badge>
                 </div>
               </div>

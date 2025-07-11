@@ -25,6 +25,7 @@ export function RecordRoomAudio() {
   async function stopRecord() {
     setIsRecording(false)
     if (recorder.current && recorder.current.state !== "inactive") {
+
       recorder.current.stop()
     }
 
@@ -36,7 +37,7 @@ export function RecordRoomAudio() {
 
     formData.append('file', audio, 'audio.webm')
 
-    const response = await fetch(`http:localhost:3333/rooms/${params.roomId}/audio`, {
+    const response = await fetch(`http://localhost:3333/rooms/${params.roomId}/audio`, {
       method: 'POST',
       body: formData,
     })
@@ -68,6 +69,7 @@ export function RecordRoomAudio() {
     })
     recorder.current.ondataavailable = event => {
       if (event.data.size > 0) {
+        console.log(event.data)
         uploadAudio(event.data)
       }
     }
