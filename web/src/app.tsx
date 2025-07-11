@@ -11,8 +11,8 @@ export function App() {
       <BrowserRouter>
         <Routes>
           <Route index element={<CreateRoom />} />
-          <Route path='/room/:id' element={<Room />} />
-          <Route path='/room/:id/audio' element={<RecordRoomAudio />} />
+          <Route path='/rooms/:id' element={<Room />} />
+          <Route path='/rooms/:id/audio' element={<RecordRoomAudio />} />
         </Routes>
       </BrowserRouter>
     </QueryClientProvider>
